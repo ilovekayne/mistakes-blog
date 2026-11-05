@@ -1,0 +1,72 @@
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "mint"
+
+title: "Minimal Mistakes (Zero, Actually)"
+subtitle: "Cataloguing every mistake Kayne has ever made"
+name: "The Mistake Auditors"
+description: "An exhaustive, peer reviewed audit of Kayne's mistakes. Results: inconclusive, because there are none."
+url: "https://mistakes.ilovekayne.xyz"
+locale: "en-US"
+search: true
+breadcrumbs: true
+
+author:
+  name: "Kayne"
+  bio: "Cybersecurity, incident response, student government. Has never made a mistake (citation: this entire blog)."
+  location: "Cyber@Stout"
+  links:
+    - label: "Main Kayne Blog"
+      icon: "fas fa-fw fa-heart"
+      url: "https://ilovekayne.xyz"
+    - label: "All The Blogs"
+      icon: "fas fa-fw fa-th"
+      url: "https://blogs.ilovekayne.xyz"
+
+footer:
+  links:
+    - label: "We love Kayne"
+      icon: "fas fa-fw fa-heart"
+      url: "https://ilovekayne.xyz"
+
+include: ["_pages"]
+paginate: 5
+paginate_path: /page:num/
+permalink: /:categories/:title/
+timezone: "America/Chicago"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: false
+      related: true
+      toc: false
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
